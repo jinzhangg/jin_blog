@@ -2,71 +2,7 @@
 
 {% block content %}
 <div class="well" style="margin:50px 20px 50px 20px;">
-    <h3>About Me</h3>
-    <p>Bioinformatics researcher shifting career focus towards computer science and web development using Python and Django framework.</p>
-    <br>
-    <h4>Education</h4>
-    <p>2009 B.S. <strong>Bioinformatics</strong> at University of California San Diego</p>
-    <br>
-    <h4>Skills</h4>
-    <pre class="prettyprint lang-html">Python   HTML   Linux   Git   SQL</pre>
-    <br>
-    <h4>Projects</h4>
-    <a href="http://jinzhang.me"><strong>jinzhang.me</strong></a>
-    <p>A personal blog written in the Python Django web framework using Postgresql database on self hosted VPS
-        running nginx and uWSGI web server.
-        The project can be found on <a href="https://github.com/jinzhang273/jin_blog">Github</a>.</p>
-    <br>
-    <h4>Experience</h4>
-    <p>Veterans Medical Research Foundation 2009-2011<p>
-    <h5>Bioinformatics Research Associate</h5>
-    <ul>
-        <li>Conduct data analysis of Affymetrix and Illumina microarray gene expression data
-            including visualization techniques such as heatmaps and hierarchical clustering methods.
-        </li>
-        <li>Design protocols and carry out wet lab experiments under sterilized flow hood
-            environments.
-        </li>
-        <li><strong>Python</strong> programming language used to perform data analysis including algorithm
-            implementations, text and spreadsheet processing, and various automation tasks.
-        </li>
-        <li>Contributions led to four manuscript authorships in scientific peer reviewed journals
-            including one as first author.
-        </li>
-    </ul>
-    <br>
-    <h4>Publications</h4>
-    <div style="font-family:courier;">
-    <ol>
-        <li><small>Nadejda Beliakova-Bethell, <strong>Jin X Zhang</strong>, Akul Singhania, Vivian Lee, Valeri
-            H Terry, Douglas D Richman,
-            Celsa A Spina, and Christopher H Woelk. <a
-                    href="http://www.ncbi.nlm.nih.gov/pubmed/?term=23221426">Suberoylanilide hydroxamic acid induces limited changes in the
-            transcriptome of primary CD4+ T cells</a>. AIDS 27, 29-37. 2013.
-        </small></li>
-        <li><small><strong>Jin X Zhang</strong>, Christopher H Woelk, Lorraine Walls, Suganya Viriyakosol, Akul
-            Singhania,
-            Theo N Kirkland, and Joshua Fierer. <a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=23006927">Factors
-                regulated by interferon gamma and hypoxia-inducible factor 1A
-            contribute to responses that protect mice from Coccidioides immitis infection</a>. BMC Microbiology 12:218.
-            2012.
-
-        </small></li>
-        <li><small>Josué Pérez-Santiago, Rebeca Diez-Alarcia, Luis F Callado, <strong>Jin X Zhang</strong>, Gursharan
-            Chana,
-                Cory H White, Stephen J Glatt, Ming T Tsuang, Ian P Everall, J Javier Meana, and Christopher H Woelk.
-            <a href="http://www.ncbi.nlm.nih.gov/pubmed/?term=22954356">A combined
-            analysis of microarray gene expression studies of the human prefrontal cortex identifies genes implicated in
-            schizophrenia</a>. Journal of Psychiatric Research 46, 1464-74. 2012.
-        </small></li>
-        <li><small>
-            Brett N Bowman, Paul R McAdam, Sandro Vivona, <strong>Jin X Zhang</strong>, Tiffany Luong, Richard K Belew,
-            Harpal Sahota, Donald Guiney, Faramarz Valafar, Joshua Fierer, and Christopher H Woelk. <a
-                href="http://www.ncbi.nlm.nih.gov/pubmed/?term=21864619">Improving reverse
-            vaccinology with a machine learning approach</a>. Vaccine 29, 8156-64. 2011.
-        </small></li>
-    </ol>
-    </div>
+    <p>{{ page.content|safe }}</p>
 </div>
 {% endblock %}
 

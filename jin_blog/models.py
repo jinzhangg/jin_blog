@@ -22,3 +22,22 @@ class Post(models.Model):
                 self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
 
+class Page(models.Model):
+    created = models.DateTimeField(auto_now_add=True, editable=False)
+    updated = models.DateTimeField(auto_now=True, editable=False)
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, blank=True, default='')
+    content = models.TextField()
+    published = models.BooleanField(default=True)
+    author = models.ForeignKey(User, related_name="pages")
+
+    class Meta:
+        ordering = ["-created", "title"]
+
+    def __unicode__(self):
+        return self.title
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super(Page, self).save(*args, **kwargs)
