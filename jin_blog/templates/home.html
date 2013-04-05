@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% for post in posts %}
+<div style="margin:50px 20px 50px 20px;">
+<a href="/"><h3>{{ post.title }}</h3></a>
+<p>{{ post.content|safe }}</p>
+</div>
+{% endfor %}
+{% endblock %}
 
-    {% for post in posts %}
-    <div>
-    <p>{{ post.title }}</p>
-    <p>{{ post.content|safe }}</p>
-    </div>
-    {% endfor %}
-
+{% block footer %}
+<script type="text/javascript">
+    $("#nav-blog").addClass("active");
+</script>
 {% endblock %}
