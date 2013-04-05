@@ -3,13 +3,31 @@
 {% block content %}
 {% for post in posts %}
 <div class="well" style="margin:50px 20px 50px 20px;">
-<a href="/"><h3>{{ post.title }}</h3></a>
+<a href="{% url 'single_post' post.pk %}"><h3>{{ post.title }}</h3></a>
 <p><small>{{ post.created|date:"F d, Y" }}</small></p>
 <p>{{ post.content|safe }}</p>
+</div>
 {% empty %}
-<p>Sorry, no posts found.</p>
+<div>
+    <p>Sorry, no posts found.</p>
 </div>
 {% endfor %}
+
+<div class="pager">
+    <ul class="pager">
+        <li class="pull-left" style="margin-left: 30px;">
+            {% if posts.has_previous %}
+            <a href="?page={{ posts.previous_page_number }}">Previous</a>
+            {% endif %}
+        </li>
+        <li class="pull-right" style="margin-right: 30px;">
+            {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">Next</a>
+            {% endif %}
+        </li>
+    </ul>
+</div>
+
 {% endblock %}
 
 {% block footer %}
