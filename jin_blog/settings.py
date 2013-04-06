@@ -170,4 +170,7 @@ try:
     from jin_blog.local_settings import *
 except ImportError:
     pass
-
+try:
+    from jin_blog.prod_settings import *
+except ImportError:
+    pass
