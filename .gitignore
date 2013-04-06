@@ -39,5 +39,5 @@ venv
 
 # Local Settings
 jin_blog/local_settings.py
-
+jin_blog/prod_settings.py
 
